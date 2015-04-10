@@ -68,13 +68,13 @@ Element providing a view of an ORCID profile and associated works
     </template>
 
     <core-ajax auto
-      url="http://pub.orcid.org/{{ orcid }}"
+      url="https://pub.orcid.org/{{ orcid }}"
       headers="{{ { Accept: 'application/json' } }}"
       handleAs="json"
       on-core-response="{{ parseProfile }}"></core-ajax>
 
     <core-ajax auto
-      url="http://pub.orcid.org/{{ orcid }}/orcid-works"
+      url="https://pub.orcid.org/{{ orcid }}/orcid-works"
       headers="{{ { Accept: 'application/json' } }}"
       handleAs="json"
       on-core-response="{{ parseWorks }}"></core-ajax>
