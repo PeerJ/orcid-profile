@@ -23,31 +23,35 @@ Element providing a view of an ORCID profile and associated works
         {{ profile['orcid-bio']['personal-details']['family-name'].value }}</div>
 
       <!-- external identifiers -->
-      <dl>
-        <dt>ORCID</dt>
-        <dd>
-          <a href="{{ profile['orcid-identifier'].uri }}">{{ profile['orcid-identifier'].path }}</a>
-        </dd>
+      <div id="identifiers">
+        <div class="identifier" layout horizontal>
+          <div class="identifier-name">ORCID</div>
+          <div flex>
+            <a href="{{ profile['orcid-identifier'].uri }}">{{ profile['orcid-identifier'].path }}</a>
+          </div>
+        </div>
 
         <template repeat="{{ identifier in profile['orcid-bio']['external-identifiers']['external-identifier'] }}">
-            <dt>{{ identifier['external-id-common-name'].value }}</dt>
-            <dd>
+          <div class="identifier" layout horizontal>
+            <div class="identifier-name">{{ identifier['external-id-common-name'].value }}</div>
+            <div flex>
               <template if="{{ identifier['external-id-url'] }}">
                 <a href="{{ identifier['external-id-url'].value }}">{{ identifier['external-id-reference'].value }}</a>
               </template>
               <template if="{{ !identifier['external-id-url'] }}">
                 {{ identifier['external-id-reference'].value }}
               </template>
-            </dd>
+            </div>
+          </div>
         </template>
-      </dl>
+      </div>
     </template>
 
+    <!-- works -->
     <template if="{{ works }}">
-      <!-- works -->
-      <template if="{{ works }}">
-        <div class="heading">Works</div>
+      <div class="heading">Works</div>
 
+      <div id="works">
         <template repeat="{{ work in works }}">
           <div class="work" layout horizontal>
             <span class="year">{{ work['publication-date']['year'].value }}</span>
@@ -60,7 +64,7 @@ Element providing a view of an ORCID profile and associated works
             </template>
           </div>
         </template>
-      </template>
+      </div>
     </template>
 
     <core-ajax auto
