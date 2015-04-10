@@ -1,0 +1,28 @@
+{
+  "name": "orcid-profile",
+  "keywords": [
+    "seed",
+    "polymer",
+    "web-components",
+    "orcid"
+  ],
+  "main": "orcid-profile.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.5",
+    "core-ajax": "Polymer/core-ajax#~0.5"
+  },
+  "devDependencies": {
+    "web-component-tester": "Polymer/web-component-tester#~2.2"
+  },
+  "homepage": "https://github.com/peerj/orcid-profile",
+  "_release": "141bdfa193",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "141bdfa193e4d5d28c0ee4b9805fc0d0b26ef86f"
+  },
+  "_source": "git://github.com/peerj/orcid-profile.git",
+  "_target": "master",
+  "_originalSource": "peerj/orcid-profile",
+  "_direct": true
+}
