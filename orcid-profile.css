@@ -1,0 +1,35 @@
+:host {
+  display: block;
+  font-family: "Helvetica", sans-serif;
+}
+
+dd {
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+#name {
+  font-size: 200%;
+  font-weight: 200;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 2rem;
+}
+
+.heading {
+  font-size: 150%;
+  font-weight: 200;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.work {
+  margin: 0.5rem 0;
+}
+
+.work .separator {
+  margin: 0 5px;
+}
