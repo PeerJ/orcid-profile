@@ -21,6 +21,16 @@ Element providing a view of an ORCID profile and associated works
       <!-- name -->
       <div id="name">{{ profile['orcid-bio']['personal-details']['given-names'].value }}
         {{ profile['orcid-bio']['personal-details']['family-name'].value }}</div>
+
+      <!-- external identifiers -->
+      <div id="identifiers">
+        <div class="identifier" layout horizontal>
+          <div class="identifier-name">ORCID</div>
+          <div flex>
+            <a href="{{ profile['orcid-identifier'].uri }}">{{ profile['orcid-identifier'].path }}</a>
+          </div>
+        </div>
+      </div>
     </template>
 
     <!-- works -->
